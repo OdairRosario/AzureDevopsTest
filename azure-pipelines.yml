@@ -15,6 +15,12 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.200'
+    vsVersion: '2022'
+    includePreviewVersions: true
 
 - task: NuGetCommand@2
   inputs:
